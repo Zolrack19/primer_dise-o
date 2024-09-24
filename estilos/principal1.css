@@ -1,0 +1,109 @@
+#crear-encuesta {
+    background-color: rgb(68, 193, 109);
+    color: white;
+    padding: 5px;
+}
+
+#carpeta {
+    padding: 5px;
+}
+
+.container-propio {
+    display: flex;
+    justify-content: space-between;
+    
+}
+
+.encuesta > div {
+    height: 200px;
+}
+
+/* Pantallas pequeñas (máximo 571px) */
+@media (max-width: 571px) {
+    .encuesta {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        grid-gap: 20px;
+        margin: 10px 30px;
+        border: 1px solid black;
+    }
+}
+
+/* Pantallas pequeñas (máximo 720px) */
+@media (max-width: 720px) {
+    .container-propio {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .encuesta {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 20px;
+        margin: 10px 30px;
+        border: 1px solid black;
+    }
+
+    .izquieda {
+        width: 90%;
+    }
+
+    .derecha {
+        width: 70%;
+        align-self: center;
+        justify-self: flex-start;
+    }
+}
+
+
+@media (max-width: 768px) {
+    .izquieda {
+        width: 50%;
+    }
+
+    .encuesta {
+        display: flex;
+        flex-direction: column; 
+        gap: 20px;
+        margin: 10px 30px;
+        border: 1px solid black;
+    }
+
+    .derecha {
+        width: 35%;
+        align-self: flex-start;
+    }
+
+}
+
+/* Pantallas medianas (mínimo 769px) */
+@media (min-width: 769px) {
+    .encuesta {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr); 
+        grid-gap: 20px;
+        margin: 10px 30px;
+        border: 1px solid black;
+    }
+
+    .izquieda {
+        width: 65%;
+    }
+
+    .derecha {
+        width: 30%;
+        align-self: flex-start;
+    }
+}
+
+/* Pantallas grandes (mínimo 1210px) */
+@media (min-width: 1210px) {
+    .encuesta {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        height: 200px;
+        margin: 10px 30px;
+    }
+
+}
